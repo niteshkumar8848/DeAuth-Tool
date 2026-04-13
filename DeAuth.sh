@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Code_BY_NiteshKumar8848
 # List the wireless interfaces 
 echo -e "Available wireless interfaces:\n"
 iwconfig
